@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>About</h1>
+  <p>
+    This is a calculator. It may or may not produce accurate results. <a href="{{url_for('index')}}">Home</a>
+  </p>
+{% endblock %}

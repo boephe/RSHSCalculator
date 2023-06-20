@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}Calculator</title>
+    {% endblock %}
+  </head>
+  <body>
+    <ul id="navigation">
+      {% for item in navigation %}
+          <li><a href="{{ url_for(item.name) }}">{{ item.caption }}</a></li>
+      {% endfor %}
+      </ul>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      &copy; <img src="https://image.freepik.com/free-icon/creative-commons-license-symbol_318-50558.jpg" width="20" height="20"/> by <a href="http://phoebe.hurren.id.au/">Hurrendous Mediocrity</a>.
+      {% endblock %}
+    </div>
+  </body>
+</html>
